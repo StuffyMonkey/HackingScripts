@@ -4,9 +4,24 @@
 **All scripts in this repo was created with educational purposes!** <br/>
 **I am not responsible for using these scripts by other users**
 
+### Preliminary preparations
+If you want to use this script, you should install aircrack-ng from the official site https://www.aircrack-ng.org/ <br/>
+or you may download it using package managers like apt-get, pacman
 
 ### Python Script
-Python script has some problem. I don't know proper way to execute airodump-ng in the background. (if you know - write me pls).
+Instruction how to use python scripts (bash is recommended, but if you really want python)
+  1. Open two shell terminals and run them as a root:
+  ```
+  su
+  ```
+  2. Run first python script to capture data
+  ```
+  python data_capturing.py
+  ```
+  3. While firt script is capturing data - run second script to attack hotspot:
+  ```
+  python attack_hotspot.py
+  ```
 
 ### Shell Scripts
 Instruction how to use bash scripts:
@@ -14,11 +29,15 @@ Instruction how to use bash scripts:
   ```
   chmod +x *.sh
   ```
-  2. Run file for capturing data with command:
+  2. Open two terminal as a root:
+  ```
+  su
+  ```
+  3. Run file for capturing data with command:
   ```
   ./data_collection.sh
   ```
-  3. Run file to attack hotspot and enumerate passwords:
+  4. Run file to attack hotspot and enumerate passwords:
   ```
   ./attack_hotspot.sh
   ```
