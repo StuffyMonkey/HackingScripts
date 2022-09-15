@@ -1,4 +1,5 @@
 import subprocess
+import time
 import re
 
 
@@ -33,6 +34,7 @@ def enable_monitor_mode(wifi_card):
 
 def disable_monitor_mode(wifi_card):
     subprocess.run(f'airmon-ng stop {wifi_card}mon', shell=True, text=True)
+    time.sleep(5)
 
 
 def start_capturing_data(bssid, channel, wifi_card, filename):
@@ -55,5 +57,5 @@ if __name__ == '__main__':
     with open('random_file_name_with_logs.txt', 'w') as f:
         f.write(bssid + '\n')
         f.writelines(filename + '\n')
-        f.writelines(wifi_card + '\n')
+        f.writelines(wifi_card + 'mon' + '\n')
     start_capturing_data(bssid, channel, wifi_card, filename)
