@@ -41,4 +41,4 @@ Instruction how to use bash scripts:
   ```
   ./attack_hotspot.sh
   ```
-  NOTE: You have to have /usr/share/wordlists/rockyou.txt file . Or you may change dictionary for cracking in the second scipt.s
+  NOTE: You have to have /usr/share/wordlists/rockyou.txt file . Or you may change dictionary for cracking in the second scipt
