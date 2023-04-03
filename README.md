@@ -29,7 +29,7 @@ Instruction how to use bash scripts:
   ```
   chmod +x *.sh
   ```
-  2. Open two terminal as a root:
+  2. Open second terminal as a root:
   ```
   su
   ```
